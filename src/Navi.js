@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Toast, ToastHeader } from 'reactstrap'
+import { Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Nav, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, NavbarText, Toast, ToastHeader, Badge } from 'reactstrap'
 
 
 
@@ -57,9 +57,9 @@ export default class Navi extends Component {
             </Nav>
 
             <NavbarText>
-              <Toast style={{ width:"120px", marginTop: "10px",position:"fixed", top:"0",right:"0"}}>
-                <ToastHeader icon="success">
-                  {this.props.cart.length} Items Added.
+              <Toast style={{width:"180px", marginTop: "10px",position:"fixed", top:"0",right:"0"}}>
+                <ToastHeader>
+                  <Badge style={{width:"50px",height:"50px", textAlign:"center", fontSize:"30px"}}  color='success'>{this.props.cart.length} </Badge> <b style={{color:"green"}}>Items Added.</b>
                 </ToastHeader>
               </Toast>
 
