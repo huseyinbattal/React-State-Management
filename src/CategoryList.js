@@ -13,7 +13,7 @@ export default class CategoryList extends Component {
   }
 
   getCategories = () => {
-    fetch("https://polar-waters-21833.herokuapp.com/categories")
+    fetch("https://dry-peak-15401.herokuapp.com/categories")
       .then(response => response.json())
     .then(data=>this.setState({categories:data}))
 }

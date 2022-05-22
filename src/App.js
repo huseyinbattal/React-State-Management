@@ -20,7 +20,7 @@ export default class App extends Component {
   }
   
   getProducts = (categoryId) => {
-    let url = "https://polar-waters-21833.herokuapp.com/products";
+    let url = "https://dry-peak-15401.herokuapp.com/products";
     if (categoryId) {
       url+="?categoryId="+categoryId
     }
