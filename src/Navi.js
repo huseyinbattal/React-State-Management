@@ -33,7 +33,7 @@ export default class Navi extends Component {
             <NavbarText>
               <Toast style={{width:"180px", marginTop: "10px",position:"fixed", top:"0",right:"0"}}>
                 <ToastHeader>
-                  <Badge style={{width:"50px",height:"50px", textAlign:"center", fontSize:"30px"}}  color='success'>{this.props.cart.length} </Badge> <b style={{color:"green"}}>Items Added.</b>
+                  <Badge style={{width:"50px",height:"50px", textAlign:"center", fontSize:"25px"}}  color='success'>{this.props.cart.length} </Badge> <b style={{color:"green"}}>Items Added.</b>
                 </ToastHeader>
               </Toast>
 
