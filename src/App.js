@@ -32,13 +32,15 @@ export default class App extends Component {
     let newCart = this.state.cart;
     var addedItem = newCart.find(c => c.product.id === product.id);
     if (addedItem) {
-      alert(`${product.productName}  has already added to cart`)
+      alert(`${product.productName}  has already been added to cart`)
       addedItem.quantity += 1;
     } else {
-    newCart.push({ product: product, quantity: 1 });
-      
+     
+      newCart.push({ product: product, quantity: 1 });
+
     }
-    this.setState({cart:newCart})
+    
+    this.setState({ cart: newCart })
   }
 
   render() {
