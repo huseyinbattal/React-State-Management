@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import { Table } from 'reactstrap'
+import { Table ,Button} from 'reactstrap'
 
 export default class ProductList extends Component {
+
+  addToCart = (product) => {
+    alert(product.productName)
+  }
 
   render() {
     return (
@@ -11,36 +15,23 @@ export default class ProductList extends Component {
         <Table striped>
           <thead>
             <tr>
-              <th>
-                Id
-              </th>
-              <th>
-                Product Name
-              </th>
-              <th>
-              unitPrice
-              </th>
-              <th>
-              unitsInStock
-              </th>
+              <th>Id</th>
+              <th>Product Name</th>
+              <th>unitPrice</th>
+              <th>unitsInStock</th>
+              <th>unitsInStock</th>
             </tr>
           </thead>
           <tbody>
             {
               this.props.products.map((item) => (
                 <tr key={item.id}>
-                  <th scope="row">
-                    {item.id}
-                  </th>
-                  <td>
-                    {item.productName}
-                  </td>
-                  <td>
-                    {item.unitPrice}
-                  </td>
-                  <td>
-                    {item.unitsInStock}
-                  </td>
+                  <th scope="row">{item.id}</th>
+                  <td>{item.productName}</td>
+                  <td>{item.unitPrice}</td>
+                  <td>{item.unitsInStock}</td>
+                  <td><Button onClick={()=>this.addToCart(item)} color="info" outline>Add to cart</Button></td>
+
                 </tr>
               ))
             }

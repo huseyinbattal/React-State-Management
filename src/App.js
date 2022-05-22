@@ -6,7 +6,7 @@ import ProductList from "./ProductList";
 
 export default class App extends Component {
   state = {
-    currentCategory: "",products:[]
+    currentCategory: "", products: []
   }
 
   componentDidMount() {
@@ -18,25 +18,23 @@ export default class App extends Component {
     this.setState({ currentCategory: item.categoryName });
     this.getProducts(item.id);
   }
-  
+
   getProducts = (categoryId) => {
     let url = "https://dry-peak-15401.herokuapp.com/products";
     if (categoryId) {
-      url+="?categoryId="+categoryId
+      url += "?categoryId=" + categoryId
     }
     fetch(url)
       .then(response => response.json())
-    .then(data=>this.setState({products:data}))
-}
+      .then(data => this.setState({ products: data }))
+  }
 
   render() {
     let categoryInfo = { title: "Product List", author: "Hüseyin BATTAL" }
     return (
       <div>
         <Container>
-          <Row>
-            <Navi />
-          </Row>
+          <Navi />
           <Row>
             <Col xs="3">
               <CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} categoryInfo={categoryInfo} />
