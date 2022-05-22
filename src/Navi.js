@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, NavbarBrand, NavbarToggler,Collapse,NavItem,Nav,NavLink,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText} from 'reactstrap'
+import { Navbar, NavbarBrand, NavbarToggler,Collapse,NavItem,Nav,NavLink,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem,NavbarText,Toast,ToastHeader,ToastBody} from 'reactstrap'
 
 
 
@@ -22,12 +22,12 @@ export default class Navi extends Component {
         navbar
       >
         <NavItem>
-          <NavLink href="/components/">
+          <NavLink href="#">
             Components
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="https://github.com/reactstrap/reactstrap">
+          <NavLink href="https://github.com/huseyinbattal">
             GitHub
           </NavLink>
         </NavItem>
@@ -54,10 +54,17 @@ export default class Navi extends Component {
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
-      </Nav>
-      <NavbarText>
-        Simple Text
-      </NavbarText>
+            </Nav>
+            
+            <NavbarText>
+          
+ 
+            </NavbarText>
+            <Toast>
+    <ToastHeader icon="success">
+    {this.props.cart.length} Item Added.
+    </ToastHeader>
+  </Toast>
     </Collapse>
   </Navbar>
 </div>
